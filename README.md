@@ -1,12 +1,12 @@
 # Treasure Hunt
 
-Avem o harta pe care sunt plasate 3 comori pe poziții aleatorii și 4 căutătoride comori în cele 4 colturi. Fiecare căutător poate înainta o căsuță pe runda șinu poate trece peste căsuțele deja explorate de el sau de ceilalți căutători. La terminarea fiecărei runde, despre fiecare căutător se va ști dacă a găsit sau nu o comoară. Primul căutător care a găsit comoara va fi câștigător și va părăsi harta. Jocul continua pana când nu mai sunt căsuțe de explorat sau nu mai exista mutări valide (toate căsuțele explorate) sau rămâne doar un căutător pe hartă fără nici o comoară.
+Avem o harta pe care sunt plasate 3 comori pe poziții aleatorii și 4 căutătoride comori în cele 4 colturi. Fiecare căutător poate înainta o căsuță pe runda și nu poate trece peste căsuțele deja explorate de el sau de ceilalți căutători. La terminarea fiecărei runde, despre fiecare căutător se va ști dacă a găsit sau nu o comoară. Primul căutător care a găsit comoara va fi câștigător și va părăsi harta. Jocul continuă pană când nu mai sunt căsuțe de explorat sau nu mai exista mutări valide (toate căsuțele explorate) sau rămâne doar un căutător pe hartă fără nici o comoară.
 
 ## Cerințe:
 
 - Crearea a 4 tipuri căutători de comori poziționați în colturile hărții;
 
-- Crearea a 3 comori așezate aleatoriu pe harta, dar niciodată în unul dincele 4 colturi;
+- Crearea a 3 comori așezate aleatoriu pe harta, dar niciodată în unul din cele 4 colturi;
 
 - Crearea unei hărți de cel puțin 15 x 15;
 
