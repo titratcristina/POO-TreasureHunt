@@ -11,7 +11,11 @@ int main() {
 
 	do {
 		cout << "Remember! The map can not be smallar than 15x15.\n";
-		cout << "Choose carefully your numbers: \n";
+		cout << "Choose your number carefully: \n" << "->";
 		cin >> size;
 	} while (size < 15);
+
+	cout << "In this game four magical seekers will be searching for a lost diamond in forest.\n";
+	cout << "Crazy Bee - first player\n" << "Sleepy Bear - second player\n" << "Drunk Raccoon - third player\n" << "Last, but not least: Sweet Deer - fourth player\n";
+
 }
