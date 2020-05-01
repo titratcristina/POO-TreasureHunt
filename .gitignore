@@ -18,3 +18,7 @@ cmake-build-debug/CMakeFiles/Makefile2
 cmake-build-debug/Makefile
 cmake-build-debug/POO_TreasureHunt
 .idea/workspace.xml
+.idea/.name
+.idea/misc.xml
+.idea/modules.xml
+.idea/POO-TreasureHunt.iml
