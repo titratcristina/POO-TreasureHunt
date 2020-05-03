@@ -23,6 +23,13 @@ private:
 	friend class DrunkRaccoon;
 	friend class SweetDeer;
 
+public:
+	explicit Game(int input);  	// constructor with parameter for user input size of map
+	void showMap();        		// show map for one round
+	int round(int input);		// playing a round
+	bool isOver();        		// check to see if the game is over
+	void playGame();        	// game management
+	virtual ~Game();        	// game destructor
 };
 
 
