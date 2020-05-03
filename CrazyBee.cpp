@@ -32,3 +32,6 @@ void CrazyBee::move(const Game &G) {
 		stuck = true;  // if there is no other way to move the player is stuck
 	}
 }
+
+// default destructor for seeker Crazy Bee
+CrazyBee::~CrazyBee() = default;
