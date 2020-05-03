@@ -193,3 +193,12 @@ void Game::playGame() {
 		}
 	}
 }
+
+// game destructor
+Game::~Game() {
+	for (int i = 0; i < size; i++) {
+		delete[] map[i];    	// deallocates from memory columns
+	}
+	delete[] map;            	// deallocates from memory rows
+	delete[] inGame;        	// deallocates from memory inGame array
+}
