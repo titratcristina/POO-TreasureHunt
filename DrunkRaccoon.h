@@ -6,8 +6,15 @@
 #define POO_TREASUREHUNT_DRUNKRACCOON_H
 
 
-class DrunkRaccoon {
+#include "Seekers.h"
 
+class DrunkRaccoon : public Seekers {
+private:
+	int direction; 							// used for movement direction
+public:
+	explicit DrunkRaccoon(const Game &G);	// constructor for third player
+	virtual ~DrunkRaccoon();				// virtual destructor
+	void move(const Game &G) override;  	// override movement method for fourth player
 };
 
 
