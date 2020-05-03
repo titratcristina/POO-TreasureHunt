@@ -11,3 +11,27 @@ SweetDeer::SweetDeer(const Game &G) : Seekers(G) {
 	stuck = false;                    // at the beginning the player isn't stuck
 	index = 4;                        // he has index 4 because he is fourth
 }
+
+// movement method for fourth player
+void SweetDeer::move(const Game &G) {
+	// Sweet Deer is jumping across the forest in zig-zag
+	if (position.column - 2 >= 0 && position.row - 2 >= 0 &&
+		(G.map[position.row - 2][position.column - 2] == 0 ||
+		 G.map[position.row - 2][position.column - 2] == 5)) {
+
+		// left up
+		position.column -= 2;
+		position.row -= 2;
+
+	} else if (position.row + 2 < G.size && position.column - 2 >= 0 &&
+			   (G.map[position.row + 2][position.column - 2] == 0 ||
+				G.map[position.row + 2][position.column - 2] == 5)) {
+
+		// left down
+		position.row += 2;
+		position.column -= 2;
+
+	} else {
+		stuck = true;    // if there is no other way to move the player is stuck
+	}
+}
