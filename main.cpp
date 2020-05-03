@@ -1,4 +1,6 @@
 #include <iostream>
+#include "Game.h"
+#include "Seekers.h"
 
 using namespace std;
 
@@ -16,6 +18,14 @@ int main() {
 	} while (size < 15);
 
 	cout << "In this game four magical seekers will be searching for a lost diamond in forest.\n";
-	cout << "Crazy Bee - first player\n" << "Sleepy Bear - second player\n" << "Drunk Raccoon - third player\n" << "Last, but not least: Sweet Deer - fourth player\n";
+	cout << "Crazy Bee - first player\n"
+		 << "Sleepy Bear - second player\n"
+		 << "Drunk Raccoon - third player\n"
+		 << "Last, but not least: Sweet Deer - fourth player\n";
 
+	cout << "Be patient! You need to wait a little bit before the map loads.\n";
+
+	Game forest(size);
+	forest.playGame();
+	return 0;
 }
