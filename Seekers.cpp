@@ -15,3 +15,8 @@ Seekers::Seekers(const Game &G) {
 int Seekers::getIndex() {
 	return index;
 }
+
+// a getter method for returning seeker's current position
+Position Seekers::getPosition() {
+	return position;
+}
