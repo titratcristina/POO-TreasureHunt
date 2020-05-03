@@ -47,3 +47,8 @@ void Seekers::getStatus(const Game &G) {
 		cout << getName(index) << " found a diamond.\n";
 	}
 }
+
+// a bool method for checking if seeker is stuck on the map
+bool Seekers::isStuck() {
+	return stuck;
+}
