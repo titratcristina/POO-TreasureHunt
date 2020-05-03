@@ -39,4 +39,11 @@ Game::Game(int input) {
 			treasures += 1;
 		}
 	}
+
+	// set seekers position
+	map[0][0] = 1;
+	map[size - 1][size - 1] = 3;
+	map[size - 1][0] = 2;
+	map[0][size - 1] = 4;
+	diamonds = 0;
 }
