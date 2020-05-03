@@ -6,6 +6,7 @@
 #include <cstdlib>		// for rand() function
 #include <ctime>		// for time function
 #include "Game.h"
+#include "Seekers.h"
 
 using namespace std;
 
@@ -46,4 +47,64 @@ Game::Game(int input) {
 	map[size - 1][0] = 2;
 	map[0][size - 1] = 4;
 	diamonds = 0;
+}
+
+
+// playing a round
+int Game::round(int input) {
+	if (input == 0) {
+		return 0;        // stop the game if input is 0
+	} else {
+		for (int i = 0; i < 4; i++) {
+			// checking players for being in game
+			if (S[i]->isPlaying(*this)) {
+				auto *initP = new Position;    	// initial position of player
+				*initP = S[i]->getPosition();
+				S[i]->move(*this);          	// if it possible move player
+
+				auto *P = new Position;			// new position of player
+				*P = S[i]->getPosition();		// after movement new position is store
+
+				// check if the player found a diamond
+				if (map[P->row][P->column] == 5) {
+					diamonds += 1;                   	// increment the value of the treasures found variable
+					S[i]->stopPlayer(*this);     	// takes the player out of the game
+					map[P->row][P->column] = 6; 		// mark on the map the place were found treasures with 6
+				} else {
+					map[P->row][P->column] = S[i]->getIndex(); 	// mark on the map index of the player
+				}
+
+				// compare the initial position with actual position
+				// if the initial position is not the same as actual position
+				// (the player did not get stuck), the movement is displayed
+				if (!(P->row == initP->row && P->column == initP->column)) {
+					cout << "The player no. " << i + 1 << " is going from: (";
+					cout << initP->row << ", " << initP->column << ") to (";
+					cout << P->row << ", " << P->column << ")\n";
+				}
+
+				// if a player finds a treasure then he leaves the map
+				if ((map[P->row][P->column]) == (5 + (S[i]->getIndex()))) {
+					cout << "The player no. " << i + 1;
+					cout << " will leave the Magic Forest.\n";
+				}
+
+				delete P;
+				delete initP;
+			}
+		}
+
+		// if a player finds a treasure return his index
+		if (diamonds == 1) {
+			// for each player check if he leaves the game
+			for (int i = 0; i < 4; i++) {
+				// if the player left the game
+				if (!inGame[i]) {
+					return i;  // return the winner index
+				}
+			}
+		}
+
+		return 0;
+	}
 }
