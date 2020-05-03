@@ -12,6 +12,11 @@
 #include "DrunkRaccoon.h"
 #include "SweetDeer.h"
 
+#define RESET   "\033[0m"
+#define GREEN   "\033[32m"      /* Green */
+#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
+#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
+
 using namespace std;
 
 // in this method the map is initialized
@@ -150,13 +155,13 @@ void Game::showMap() {
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < size; j++) {
 			if (map[i][j] == 5) {
-				cout << "  \u2666  "; 		// the treasure will be displayed as a diamond ♦
+				cout << BOLDMAGENTA << "  \u2666  " << RESET; 		// the treasure will be displayed as a diamond ♦
 			} else if (map[i][j] == 6) {
-				cout << "  \u2605  "; 		// if a seeker found a diamond ♦, the place will be marked with a star
+				cout << BOLDYELLOW << "  \u2605  " << RESET; 		// if a seeker found a diamond ♦, the place will be marked with a star
 			} else if (map[i][j]) {
 				cout << "  " << map[i][j] << "  "; 	// show number of player
 			} else {
-				cout << " \u2591\u2591\u2591 ";		// show a shadow
+				cout << GREEN << " \u2591\u2591\u2591 " << RESET;		// show a shadow
 			}
 		}
 		cout << endl;
