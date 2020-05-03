@@ -14,6 +14,15 @@ private:
 	int diamonds;    			// represents the number of diamonds/treasures found
 	int *inGame;    			// mark the players who are in the game
 	int winner;    				// represents the index of the winning Seeker
+
+	Seekers *S[4]{};
+
+	friend class Seekers;  		// change private inGame propertie of Game class
+	friend class CrazyBee;  	// need to check and change private properties of Game class when players move
+	friend class SleepyBear;
+	friend class DrunkRaccoon;
+	friend class SweetDeer;
+
 };
 
 
