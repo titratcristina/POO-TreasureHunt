@@ -7,6 +7,10 @@
 #include <ctime>		// for time function
 #include "Game.h"
 #include "Seekers.h"
+#include "CrazyBee.h"
+#include "SleepyBear.h"
+#include "DrunkRaccoon.h"
+#include "SweetDeer.h"
 
 using namespace std;
 
