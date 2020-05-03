@@ -62,3 +62,6 @@ bool Seekers::isPlaying(const Game &G) {
 void Seekers::stopPlayer(Game &G) {
 	G.inGame[getIndex()] = 0;
 }
+
+// default destructor for seekers
+Seekers::~Seekers() = default;
