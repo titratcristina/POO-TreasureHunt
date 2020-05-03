@@ -19,7 +19,7 @@ void SweetDeer::move(const Game &G) {
 		(G.map[position.row - 2][position.column - 2] == 0 ||
 		 G.map[position.row - 2][position.column - 2] == 5)) {
 
-		// left up
+		// left down
 		position.column -= 2;
 		position.row -= 2;
 
@@ -27,7 +27,7 @@ void SweetDeer::move(const Game &G) {
 			   (G.map[position.row + 2][position.column - 2] == 0 ||
 				G.map[position.row + 2][position.column - 2] == 5)) {
 
-		// left down
+		// left up
 		position.row += 2;
 		position.column -= 2;
 

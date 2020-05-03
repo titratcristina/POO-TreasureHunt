@@ -13,9 +13,9 @@
 #include "SweetDeer.h"
 
 #define RESET   "\033[0m"
-#define GREEN   "\033[32m"      /* Green */
-#define BOLDYELLOW  "\033[1m\033[33m"      /* Bold Yellow */
-#define BOLDMAGENTA "\033[1m\033[35m"      /* Bold Magenta */
+#define GREEN   "\033[32m"      		// Green
+#define BOLDYELLOW  "\033[1m\033[33m" 	// Bold Yellow
+#define BOLDMAGENTA "\033[1m\033[35m" 	// Bold Magenta
 
 using namespace std;
 
