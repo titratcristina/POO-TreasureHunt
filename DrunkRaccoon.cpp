@@ -11,3 +11,27 @@ DrunkRaccoon::DrunkRaccoon(const Game &G) : Seekers(G) {
 	stuck = false;                    // at the beginning the player isn't stuck
 	index = 3;                        // he has index 3 because he is third
 }
+
+// movement method for third player
+void DrunkRaccoon::move(const Game &G) {
+	// DrunkRaccoon is moving on diagonally
+
+	if (direction == 1 && position.column - 1 >= 0 && position.row - 1 >= 0 &&
+		(G.map[position.row - 1][position.column - 1] == 0 ||
+		 G.map[position.row - 1][position.column - 1] == 5)) {
+
+		// going up diagonally
+		position.column -= 1;
+		position.row -= 1;
+
+	} else if (position.row + 1 >= 0 && position.row + 1 < G.size &&
+			   (G.map[position.row + 1][position.column] == 0 ||
+				G.map[position.row + 1][position.column] == 5)) {
+
+		// going to right
+		direction = -1;
+		position.row += 1;
+	} else {
+		stuck = true;    // if there is no other way to move the player is stuck
+	}
+}
