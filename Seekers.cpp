@@ -52,3 +52,8 @@ void Seekers::getStatus(const Game &G) {
 bool Seekers::isStuck() {
 	return stuck;
 }
+
+// a bool method for checking if seeker is still on the map or not
+bool Seekers::isPlaying(const Game &G) {
+	return G.inGame[getIndex()];
+}
