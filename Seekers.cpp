@@ -41,7 +41,7 @@ const char *Seekers::getName(int i) {
 void Seekers::getStatus(const Game &G) {
 	if (stuck) {
 		cout << "The player " << "(" << index << ") ";
-		cout << getName(index) << " got stuck in a tree\n";
+		cout << getName(index) << " got stuck in a tree.\n";
 	} else if (!isPlaying(G)) {
 		cout << "The player " << "(" << index << ") ";
 		cout << getName(index) << " found a diamond.\n";
