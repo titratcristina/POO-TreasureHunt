@@ -36,3 +36,14 @@ const char *Seekers::getName(int i) {
 			return "Seeker";
 	}
 }
+
+// a method to show if a player found a diamond or got stuck
+void Seekers::getStatus(const Game &G) {
+	if (stuck) {
+		cout << "The player " << "(" << index << ") ";
+		cout << getName(index) << " got stuck in a tree\n";
+	} else if (!isPlaying(G)) {
+		cout << "The player " << "(" << index << ") ";
+		cout << getName(index) << " found a diamond.\n";
+	}
+}
