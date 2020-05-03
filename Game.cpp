@@ -24,4 +24,19 @@ Game::Game(int input) {
 		}
 	}
 
+	// randomly place the 3 treasures on the map
+	int i, j, treasures = 0;
+	while (treasures < 3) {
+		srand(time(nullptr));    	// initialize random seed
+		i = rand() % size;        	// generate number between 1 and (size - 1)
+		j = rand() % size;
+
+		// i and j cannot be (0,0) (n,n), (0,n), (n,0)
+		// position on map bust be 0 (0 means no element is there)
+		if ((i || j) && !(i == size - 1 && j == size - 1) && !(i == 0 && j == size - 1) &&
+			!(i == size - 1 && j == 0) && map[i][j] == 0) {
+			map[i][j] = 5;        	// the treasure is marked with 5 on map, because index from 1 to 4 is for seekers
+			treasures += 1;
+		}
+	}
 }
