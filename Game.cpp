@@ -129,3 +129,22 @@ bool Game::isOver() {
 	}
 	return false;
 }
+
+// show map for one round
+void Game::showMap() {
+	for (int i = 0; i < size; i++) {
+		for (int j = 0; j < size; j++) {
+			if (map[i][j] == 5) {
+				cout << "  \u2666  "; 		// the treasure will be displayed as a diamond ♦
+			} else if (map[i][j] == 6) {
+				cout << "  \u2605  "; 		// if a seeker found a diamond ♦, the place will be marked with a star
+			} else if (map[i][j]) {
+				cout << "  " << map[i][j] << "  "; 	// show number of player
+			} else {
+				cout << " \u2591\u2591\u2591 ";		// show a shadow
+			}
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
