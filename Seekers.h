@@ -5,6 +5,9 @@
 #ifndef POO_TREASUREHUNT_SEEKERS_H
 #define POO_TREASUREHUNT_SEEKERS_H
 
+struct Position {
+	int row, column;
+};
 
 class Seekers {
 
