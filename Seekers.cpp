@@ -57,3 +57,8 @@ bool Seekers::isStuck() {
 bool Seekers::isPlaying(const Game &G) {
 	return G.inGame[getIndex()];
 }
+
+// a method to stop seeker when he gets stuck or finds a diamond
+void Seekers::stopPlayer(Game &G) {
+	G.inGame[getIndex()] = 0;
+}
