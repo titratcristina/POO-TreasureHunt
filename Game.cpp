@@ -57,6 +57,11 @@ Game::Game(int input) {
 	inGame = new int[4]{1, 1, 1, 1};
 	winner = 0;        // at first winner must be 0
 
+	// declaration of the 4 seekers
+	S[0] = new CrazyBee(*this);
+	S[1] = new SleepyBear(*this);
+	S[2] = new DrunkRaccoon(*this);
+	S[3] = new SweetDeer(*this);
 }
 
 
