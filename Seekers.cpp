@@ -10,3 +10,8 @@ using namespace std;
 // default constructor for seekers
 Seekers::Seekers(const Game &G) {
 }
+
+// a getter method for returning seeker's index
+int Seekers::getIndex() {
+	return index;
+}
