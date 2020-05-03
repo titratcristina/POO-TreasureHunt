@@ -15,7 +15,6 @@ DrunkRaccoon::DrunkRaccoon(const Game &G) : Seekers(G) {
 // movement method for third player
 void DrunkRaccoon::move(const Game &G) {
 	// DrunkRaccoon is moving on diagonally
-
 	if (direction == 1 && position.column - 1 >= 0 && position.row - 1 >= 0 &&
 		(G.map[position.row - 1][position.column - 1] == 0 ||
 		 G.map[position.row - 1][position.column - 1] == 5)) {
@@ -31,6 +30,7 @@ void DrunkRaccoon::move(const Game &G) {
 		// going to right
 		direction = -1;
 		position.row += 1;
+
 	} else {
 		stuck = true;    // if there is no other way to move the player is stuck
 	}

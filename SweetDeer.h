@@ -9,9 +9,10 @@
 
 class SweetDeer : public Seekers {
 public:
-	explicit SweetDeer(const Game &G);	// constructor for fourth player
-	virtual ~SweetDeer();				// virtual destructor
-	void move(const Game &G) override;  // override movement method for fourth player
+	explicit SweetDeer(const Game &G);		// constructor for fourth player
+	virtual ~SweetDeer();					// virtual destructor
+	void move(const Game &G) override;  	// override movement method for fourth player
 };
+
 
 #endif //POO_TREASUREHUNT_SWEETDEER_H

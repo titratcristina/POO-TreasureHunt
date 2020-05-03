@@ -73,12 +73,12 @@ int Game::round(int input) {
 		for (int i = 0; i < 4; i++) {
 			// checking players for being in game
 			if (S[i]->isPlaying(*this)) {
-				auto *initP = new Position;    	// initial position of player
+				auto *initP = new Position;    		// initial position of player
 				*initP = S[i]->getPosition();
 				S[i]->move(*this);          	// if it possible move player
 
-				auto *P = new Position;			// new position of player
-				*P = S[i]->getPosition();		// after movement new position is store
+				auto *P = new Position;		// new position of player
+				*P = S[i]->getPosition();	// after movement new position is store
 
 				// check if the player found a diamond
 				if (map[P->row][P->column] == 5) {

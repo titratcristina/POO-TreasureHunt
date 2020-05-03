@@ -3,6 +3,7 @@
 //
 
 #include "CrazyBee.h"
+
 // constructor for seeker Crazy Bee
 CrazyBee::CrazyBee(const Game &G) : Seekers(G) {
 	position.row = position.column = 0;    	  // initial position is (0, 0)
@@ -14,7 +15,6 @@ CrazyBee::CrazyBee(const Game &G) : Seekers(G) {
 // movement method for first player
 void CrazyBee::move(const Game &G) {
 	// CrazyBee is going down then to the right, forming an L
-
 	if (direction == 1 && position.row + 1 >= 0 && position.row + 1 < G.size &&
 		(G.map[position.row + 1][position.column] == 0 || G.map[position.row + 1][position.column] == 5)) {
 
