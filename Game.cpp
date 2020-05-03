@@ -148,3 +148,48 @@ void Game::showMap() {
 	}
 	cout << endl;
 }
+
+// game management
+void Game::playGame() {
+	int input, indexWinner;
+	cout << "This is the battlefield in the forest:\n";
+	showMap();    // show initial map
+
+	// ask user if he want to continue the game
+	cout << "Do you want to continue? (YES->1, NO->0)\n";
+	cin >> input;
+
+	// while user's answer is YES, the game runs
+	while (input) {
+		indexWinner = round(input); 	// indexWinner gets index of winning player from previous round
+
+		showMap();  					// show battlefield
+
+		// the winner stores the index of first player that found the diamond
+		if (indexWinner && (diamonds == 1)) {
+			winner = indexWinner;
+		}
+
+		// if exists a winner show message down below
+		if (winner) {
+			cout << "The seeker no. " << winner << " is the winner! Player left the forest.\n";
+		}
+
+		// show status for every player
+		for (auto &i : S) {
+			i->getStatus(*this);
+		}
+
+		// when game is over, show finish message
+		if (isOver()) {
+			cout << "THE GAME IS OVER\n";
+			input = 0;
+		}
+
+		// ask user if he want to continue the game
+		if (input) {
+			cout << "Do you want to continue? (YES->1, NO->0)\n";
+			cin >> input;
+		}
+	}
+}
