@@ -51,6 +51,12 @@ Game::Game(int input) {
 	map[size - 1][0] = 2;
 	map[0][size - 1] = 4;
 	diamonds = 0;
+
+	// mark all 4 seekers as being in the Game
+	// a player is in game when it is marked with 1
+	inGame = new int[4]{1, 1, 1, 1};
+	winner = 0;        // at first winner must be 0
+
 }
 
 
