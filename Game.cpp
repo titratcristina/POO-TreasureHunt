@@ -59,7 +59,7 @@ Game::Game(int input) {
 
 	// mark all 4 seekers as being in the Game
 	// a player is in game when it is marked with 1
-	inGame = new int[4]{1, 1, 1, 1};
+	inGame = new int[5]{1, 1, 1, 1, 1};
 	winner = 0;        // at first winner must be 0
 
 	// declaration of the 4 seekers
@@ -117,7 +117,7 @@ int Game::round(int input) {
 		// if a player finds a treasure return his index
 		if (diamonds == 1) {
 			// for each player check if he leaves the game
-			for (int i = 0; i < 4; i++) {
+			for (int i = 1; i < 5; i++) {
 				// if the player left the game
 				if (!inGame[i]) {
 					return i;  // return the winner index
