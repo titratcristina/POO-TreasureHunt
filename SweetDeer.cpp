@@ -35,3 +35,6 @@ void SweetDeer::move(const Game &G) {
 		stuck = true;    // if there is no other way to move the player is stuck
 	}
 }
+
+// default destructor for seeker Sweet Deer
+SweetDeer::~SweetDeer() = default;
