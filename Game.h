@@ -5,6 +5,8 @@
 #ifndef POO_TREASUREHUNT_GAME_H
 #define POO_TREASUREHUNT_GAME_H
 
+class Seekers; 					// forward declaration for Seekers class
+
 class Game {
 private:
 	int **map;        			// allocate dynamically a 2D matrix
@@ -13,5 +15,6 @@ private:
 	int *inGame;    			// mark the players who are in the game
 	int winner;    				// represents the index of the winning Seeker
 };
+
 
 #endif //POO_TREASUREHUNT_GAME_H
