@@ -10,6 +10,10 @@ struct Position {
 };
 
 class Seekers {
+protected:
+	Position position{};
+	int index{};
+	bool stuck{};
 
 };
 
