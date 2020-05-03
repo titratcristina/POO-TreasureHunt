@@ -108,3 +108,24 @@ int Game::round(int input) {
 		return 0;
 	}
 }
+
+// check to see if the game is over
+bool Game::isOver() {
+	// if were found all 3 diamonds the game is over
+	if (diamonds == 3) {
+		return true;
+	} else {
+		int playerStuck = 0;
+		for (auto &i : S) {
+			if (i->isStuck() == 1) {
+				playerStuck++;    // check stuck players
+			}
+		}
+		// if stuck players and diamonds found are in total 4, the game is over
+		// (ex. 3 players are stuck and 1 player found a diamond => GAME OVER )
+		if (playerStuck + diamonds == 4) {
+			return true;
+		}
+	}
+	return false;
+}
