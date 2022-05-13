@@ -1,3 +1,6 @@
+# Short description
+Used C++ to create a console application to integrate object-oriented programming concepts. Treasure Hunt is a console game where three treasures are displayed on a map randomly and four seekers with predefined movements are searching for them if were found all three diamonds or if there are three stuck players and a winner (a seeker that found a diamond) the game is over.
+
 # Treasure Hunt
 
 Avem o harta pe care sunt plasate 3 comori pe poziții aleatorii și 4 căutătoride comori în cele 4 colturi. Fiecare căutător poate înainta o căsuță pe runda și nu poate trece peste căsuțele deja explorate de el sau de ceilalți căutători. La terminarea fiecărei runde, despre fiecare căutător se va ști dacă a găsit sau nu o comoară. Primul căutător care a găsit comoara va fi câștigător și va părăsi harta. Jocul continuă pană când nu mai sunt căsuțe de explorat sau nu mai exista mutări valide (toate căsuțele explorate) sau rămâne doar un căutător pe hartă fără nici o comoară.
